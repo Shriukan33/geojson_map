@@ -81,6 +81,14 @@ Vagrant.configure("2") do |config|
     sudo apt-get dist-upgrade -y
     sudo apt-get install -y binutils libproj-dev gdal-bin
     sudo apt-get install -y libsqlite3-mod-spatialite
+    sudo apt-get install -y  emacs-nox python3 python3-virtualenv python3-pip
+    sudo apt-get install -y  libpq-dev gcc libpython3.8-dev
+    cd /vagrant
+    rm -rf venv.vagrant
+    virtualenv --python=python3 venv.vagrant
+    . venv.vagrant/bin/activate
+    pip install -r requirements.txt
+
 SETUP
   
 
