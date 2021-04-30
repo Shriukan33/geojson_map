@@ -79,8 +79,8 @@ Vagrant.configure("2") do |config|
     sudo apt-get install -y emacs-nox ruby-bundler
     sudo apt-get upgrade -y
     sudo apt-get dist-upgrade -y
-    sudo apt-get install binutils libproj-dev gdal-bin
-    sudo apt-get install libsqlite3-mod-spatialite
+    sudo apt-get install -y binutils libproj-dev gdal-bin
+    sudo apt-get install -y libsqlite3-mod-spatialite
 SETUP
   
 
