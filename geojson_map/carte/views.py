@@ -24,6 +24,8 @@ class MainMapView(TemplateView):
 
         m = folium.Map(location=[47.2184, -1.5556], zoom_start=12) # Centered on Nantes, can change the map style with the tiles argument
         folium.GeoJson(plan_theorie, name="geojson").add_to(m) # Adding the first layer of the map with the GeoJSON file
+
+        folium.LayerControl().add_to(m) # Adds the option to filter Layers
         
         template_folder = str(Path(__file__).resolve().parent / 'templates' / 'carte')
         m.save(f"{template_folder}/map.html")
