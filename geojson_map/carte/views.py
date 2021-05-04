@@ -26,5 +26,6 @@ class MainMapView(TemplateView):
         folium.GeoJson(plan_theorie, name="geojson").add_to(m) # Adding the first layer of the map with the GeoJSON file
         
         template_folder = str(Path(__file__).resolve().parent / 'templates' / 'carte')
+        folium.LayerControl().add_to(m)
         m.save(f"{template_folder}/map.html")
 
